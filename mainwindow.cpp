@@ -219,6 +219,286 @@ void MainWindow::updateValue()
     ui-> lcdNumber_23 ->display(dialys_mode_display[6]);
     ui-> lcdNumber_24 ->display(dialys_mode_display[7]);
 
+    //Maintenance Digital Input
+    if(maintenance_digital_input[0] == 0)
+    {
+        ui->input_1->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_1->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[1] == 0)
+    {
+        ui->input_2->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_2->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[2] == 0)
+    {
+        ui->input_3->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_3->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[3] == 0)
+    {
+        ui->input_4->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_4->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[4] == 0)
+    {
+        ui->input_5->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_5->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[5] == 0)
+    {
+        ui->input_6->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_6->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[6] == 0)
+    {
+        ui->input_7->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_7->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[7] == 0)
+    {
+        ui->input_8->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_8->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[8] == 0)
+    {
+        ui->input_9->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_9->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[9] == 0)
+    {
+        ui->input_10->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_10->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[10] == 0)
+    {
+        ui->input_11->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_11->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[11] == 0)
+    {
+        ui->input_12->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_12->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[12] == 0)
+    {
+        ui->input_13->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_13->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[13] == 0)
+    {
+        ui->input_14->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_14->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[14] == 0)
+    {
+        ui->input_15->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_15->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[15] == 0)
+    {
+        ui->input_16->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_16->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[16] == 0)
+    {
+        ui->input_17->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_17->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[17] == 0)
+    {
+        ui->input_18->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_18->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[18] == 0)
+    {
+        ui->input_19->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_19->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[19] == 0)
+    {
+        ui->input_20->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_20->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[20] == 0)
+    {
+        ui->input_21->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_21->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[21] == 0)
+    {
+        ui->input_22->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_22->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[22] == 0)
+    {
+        ui->input_23->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_23->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[23] == 0)
+    {
+        ui->input_24->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_24->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[24] == 0)
+    {
+        ui->input_25->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_25->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[25] == 0)
+    {
+        ui->input_26->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_26->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[27] == 0)
+    {
+        ui->input_28->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_28->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[28] == 0)
+    {
+        ui->input_29->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_29->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[29] == 0)
+    {
+        ui->input_30->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_30->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[30] == 0)
+    {
+        ui->input_31->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_31->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_digital_input[31] == 0)
+    {
+        ui->input_32->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui->input_32->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
 }
 
 void MainWindow::on_pushButton_5_clicked(bool checked)
@@ -431,5 +711,485 @@ void MainWindow::on_buttonStart_clicked(bool checked)
 }
 
 
+//Maintenance Tombol Valve
 
+
+void MainWindow::on_buttonValve_1_clicked(bool checked)
+{
+    if(maintenance_button_valve[0] == 0)
+    {
+        maintenance_button_valve[0] = 1;
+        ui->buttonValve_1->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[0] = 0;
+        ui->buttonValve_1->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_2_clicked(bool checked)
+{
+    if(maintenance_button_valve[1] == 0)
+    {
+        maintenance_button_valve[1] = 1;
+        ui->buttonValve_2->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[1] = 0;
+        ui->buttonValve_2->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_3_clicked(bool checked)
+{
+    if(maintenance_button_valve[2] == 0)
+    {
+        maintenance_button_valve[2] = 1;
+        ui->buttonValve_3->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[2] = 0;
+        ui->buttonValve_3->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_4_clicked(bool checked)
+{
+    if(maintenance_button_valve[3] == 0)
+    {
+        maintenance_button_valve[3] = 1;
+        ui->buttonValve_4->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[3] = 0;
+        ui->buttonValve_4->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_5_clicked(bool checked)
+{
+    if(maintenance_button_valve[4] == 0)
+    {
+        maintenance_button_valve[4] = 1;
+        ui->buttonValve_5->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[4] = 0;
+        ui->buttonValve_5->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_6_clicked(bool checked)
+{
+    if(maintenance_button_valve[5] == 0)
+    {
+        maintenance_button_valve[5] = 1;
+        ui->buttonValve_6->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[5] = 0;
+        ui->buttonValve_6->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_7_clicked(bool checked)
+{
+    if(maintenance_button_valve[6] == 0)
+    {
+        maintenance_button_valve[6] = 1;
+        ui->buttonValve_7->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[6] = 0;
+        ui->buttonValve_7->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_8_clicked(bool checked)
+{
+    if(maintenance_button_valve[7] == 0)
+    {
+        maintenance_button_valve[7] = 1;
+        ui->buttonValve_8->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[7] = 0;
+        ui->buttonValve_8->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_9_clicked(bool checked)
+{
+    if(maintenance_button_valve[8] == 0)
+    {
+        maintenance_button_valve[8] = 1;
+        ui->buttonValve_9->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[8] = 0;
+        ui->buttonValve_9->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_10_clicked(bool checked)
+{
+    if(maintenance_button_valve[9] == 0)
+    {
+        maintenance_button_valve[9] = 1;
+        ui->buttonValve_10->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[9] = 0;
+        ui->buttonValve_10->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_11_clicked(bool checked)
+{
+    if(maintenance_button_valve[10] == 0)
+    {
+        maintenance_button_valve[10] = 1;
+        ui->buttonValve_11->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[10] = 0;
+        ui->buttonValve_11->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_12_clicked(bool checked)
+{
+    if(maintenance_button_valve[11] == 0)
+    {
+        maintenance_button_valve[11] = 1;
+        ui->buttonValve_12->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[11] = 0;
+        ui->buttonValve_12->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_13_clicked(bool checked)
+{
+    if(maintenance_button_valve[12] == 0)
+    {
+        maintenance_button_valve[12] = 1;
+        ui->buttonValve_13->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[12] = 0;
+        ui->buttonValve_13->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_14_clicked(bool checked)
+{
+    if(maintenance_button_valve[13] == 0)
+    {
+        maintenance_button_valve[13] = 1;
+        ui->buttonValve_14->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[13] = 0;
+        ui->buttonValve_14->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_15_clicked(bool checked)
+{
+    if(maintenance_button_valve[14] == 0)
+    {
+        maintenance_button_valve[14] = 1;
+        ui->buttonValve_15->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[14] = 0;
+        ui->buttonValve_15->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_16_clicked(bool checked)
+{
+    if(maintenance_button_valve[15] == 0)
+    {
+        maintenance_button_valve[15] = 1;
+        ui->buttonValve_16->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[15] = 0;
+        ui->buttonValve_16->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_17_clicked(bool checked)
+{
+    if(maintenance_button_valve[16] == 0)
+    {
+        maintenance_button_valve[16] = 1;
+        ui->buttonValve_17->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[16] = 0;
+        ui->buttonValve_17->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_18_clicked(bool checked)
+{
+    if(maintenance_button_valve[17] == 0)
+    {
+        maintenance_button_valve[17] = 1;
+        ui->buttonValve_18->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[17] = 0;
+        ui->buttonValve_18->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_19_clicked(bool checked)
+{
+    if(maintenance_button_valve[18] == 0)
+    {
+        maintenance_button_valve[18] = 1;
+        ui->buttonValve_19->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[18] = 0;
+        ui->buttonValve_19->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_20_clicked(bool checked)
+{
+    if(maintenance_button_valve[19] == 0)
+    {
+        maintenance_button_valve[19] = 1;
+        ui->buttonValve_20->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[19] = 0;
+        ui->buttonValve_20->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_21_clicked(bool checked)
+{
+    if(maintenance_button_valve[20] == 0)
+    {
+        maintenance_button_valve[20] = 1;
+        ui->buttonValve_21->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[20] = 0;
+        ui->buttonValve_21->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_22_clicked(bool checked)
+{
+    if(maintenance_button_valve[21] == 0)
+    {
+        maintenance_button_valve[21] = 1;
+        ui->buttonValve_22->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[21] = 0;
+        ui->buttonValve_22->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_23_clicked(bool checked)
+{
+    if(maintenance_button_valve[22] == 0)
+    {
+        maintenance_button_valve[22] = 1;
+        ui->buttonValve_23->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[22] = 0;
+        ui->buttonValve_23->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_24_clicked(bool checked)
+{
+    if(maintenance_button_valve[23] == 0)
+    {
+        maintenance_button_valve[23] = 1;
+        ui->buttonValve_24->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[23] = 0;
+        ui->buttonValve_24->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_25_clicked(bool checked)
+{
+    if(maintenance_button_valve[24] == 0)
+    {
+        maintenance_button_valve[24] = 1;
+        ui->buttonValve_25->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[24] = 0;
+        ui->buttonValve_25->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_26_clicked(bool checked)
+{
+    if(maintenance_button_valve[25] == 0)
+    {
+        maintenance_button_valve[25] = 1;
+        ui->buttonValve_26->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[25] = 0;
+        ui->buttonValve_26->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_27_clicked(bool checked)
+{
+    if(maintenance_button_valve[26] == 0)
+    {
+        maintenance_button_valve[26] = 1;
+        ui->buttonValve_27->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[26] = 0;
+        ui->buttonValve_27->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_28_clicked(bool checked)
+{
+    if(maintenance_button_valve[27] == 0)
+    {
+        maintenance_button_valve[27] = 1;
+        ui->buttonValve_28->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[27] = 0;
+        ui->buttonValve_28->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_29_clicked(bool checked)
+{
+    if(maintenance_button_valve[28] == 0)
+    {
+        maintenance_button_valve[28] = 1;
+        ui->buttonValve_29->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[28] = 0;
+        ui->buttonValve_29->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_30_clicked(bool checked)
+{
+    if(maintenance_button_valve[29] == 0)
+    {
+        maintenance_button_valve[29] = 1;
+        ui->buttonValve_30->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[29] = 0;
+        ui->buttonValve_30->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_31_clicked(bool checked)
+{
+    if(maintenance_button_valve[30] == 0)
+    {
+        maintenance_button_valve[30] = 1;
+        ui->buttonValve_31->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[30] = 0;
+        ui->buttonValve_31->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_buttonValve_32_clicked(bool checked)
+{
+    if(maintenance_button_valve[31] == 0)
+    {
+        maintenance_button_valve[31] = 1;
+        ui->buttonValve_32->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve[31] = 0;
+        ui->buttonValve_32->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
 

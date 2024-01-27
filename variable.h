@@ -38,6 +38,10 @@ std::string dialys_mode_input_text_label[4]= {"test", "test1", "test2", "test3"}
 std::string dialys_mode_output_text_label[4]= {"test", "test1", "test2", "test3"};
 
 //Variable for MAINTENANCE
+//Konfigutasi Input Output Tombol Valve
+bool maintenance_button_valve[32];
+bool maintenance_digital_input[32];
+
 
 #endif // VARIABLE_H
 
