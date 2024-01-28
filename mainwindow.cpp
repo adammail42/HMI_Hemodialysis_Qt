@@ -10,12 +10,25 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    //Tab Widget to index 0
+    for (int i = 1; i <= 7; ++i) {
+        QString tabWidgetObjectName = QString("tabWidget_%1").arg(i);
+        QTabWidget* currentTabWidget = findChild<QTabWidget*>(tabWidgetObjectName);
+
+        if (currentTabWidget) {
+            // Set the current tab index to 0 (the first tab)
+            currentTabWidget->setCurrentIndex(0);
+        } else {
+            // Handle the case where the tab widget with the specified name is not found
+            qDebug() << "Tab widget not found: " << tabWidgetObjectName;
+        }
+    }
     // Create a timer and connect its timeout signal to the updateValue slot
     updateTimer = new QTimer(this);
     connect(updateTimer, &QTimer::timeout, this, MainWindow::updateValue);
 
     // Set the timer interval (in milliseconds)
-    updateTimer->start(1000); // Update the value every 1000 milliseconds (1 second)
+    updateTimer->start(500); // Update the value every 1000 milliseconds (1 second)
 
     //Name TextLabel Display Variable Prep Mode
     ui-> label   ->setText(QString::fromStdString(prep_mode_display_text_label[0]));
@@ -89,6 +102,15 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::showEvent(QShowEvent* event)
+{
+    QMainWindow::showEvent(event);
+    if(firstTimeShown)
+    {
+       firstTimeShown = false;
+       showFullScreen();
+    }
+}
 
 void MainWindow::on_pushButton_clicked(bool checked)
 {
@@ -177,17 +199,33 @@ void MainWindow::updateValue()
     if(index_H1 == 0)
     {
         index_H2 = index_H2_prep;
+        index_H3 = 0;
     }
     else if (index_H1 == 1)
     {
         index_H2 = index_H2_rinse;
+        index_H3 = 0;
     }
     else if (index_H1 == 2)
     {
         index_H2 = index_H2_dialys;
+        index_H3 = 0;
+    }
+    else if(index_H1 == 3)
+    {
+        index_H2 = index_H2_maintenance;
+        if(index_H2 == 0)
+        {
+            index_H3 = index_H3_maintenance_1;
+        }
+        else if(index_H2 == 1)
+        {
+            index_H3 = index_H3_maintenance_2;
+        }
     }
     ui-> labelIndexH1 -> setText(QString::fromStdString(std::to_string(index_H1)));
     ui-> labelIndexH2 -> setText(QString::fromStdString(std::to_string(index_H2)));
+    ui-> labelIndexH3 -> setText(QString::fromStdString(std::to_string(index_H3)));
 
     //Value Display Variable Prep Mode
     ui-> lcdNumber   ->display(prep_mode_display[0]);
@@ -499,6 +537,67 @@ void MainWindow::updateValue()
         ui->input_32->setStyleSheet("background-color: #3498db; color: #ffffff;");
     }
 
+    //Maintenance Num Display 1
+
+    // QString labelText = QString("Val 1 = %1").arg(maintenance_num_display_1[0]);
+    // ui->numDisplay_1->setText(labelText);
+
+    for (int i = 0; i < 32; ++i) {
+        int16_t value = maintenance_num_display_1[i];  // Replace with your actual array of integer values
+        QString labelText = QString("Val %1 = %2").arg(i + 1).arg(value);
+        QString numDisplayObjectName = QString("numDisplay_%1").arg(i + 1);
+        QLabel* numDisplayWidget = findChild<QLabel*>(numDisplayObjectName);
+
+        if (numDisplayWidget) {
+            numDisplayWidget->setText(labelText);
+        } else {
+            // Handle the case where the widget with the specified name is not found
+            qDebug() << "Widget not found: " << numDisplayObjectName;
+        }
+    }
+
+    //Maintenance Num Display 2
+    for (int i = 0; i < 32; ++i) {
+        int16_t value = maintenance_num_display_2[i];  // Replace with your actual array of integer values
+        QString labelText = QString("Val %1 = %2").arg(i + 1).arg(value);
+        QString numDisplayObjectName = QString("numDisplay_2_%1").arg(i + 1);
+        QLabel* numDisplayWidget = findChild<QLabel*>(numDisplayObjectName);
+
+        if (numDisplayWidget) {
+            numDisplayWidget->setText(labelText);
+        } else {
+            // Handle the case where the widget with the specified name is not found
+            qDebug() << "Widget not found: " << numDisplayObjectName;
+        }
+    }
+
+    //Maintenance Konfigurasi Motor
+    ui-> realMotorPeristaltik ->display(maintenance_real_motor_peristaltik);
+    ui-> realMotorDAC1 -> display(maintenance_real_motor_DAC_1);
+    ui-> realMotorDAC2 -> display(maintenance_real_motor_DAC_1);
+    ui-> realMotorPump1 -> display(maintenance_real_motor_pump_1);
+    ui-> realMotorPump2 -> display(maintenance_real_motor_pump_2);
+    ui-> realMotorPump3 -> display(maintenance_real_motor_pump_3);
+    ui-> realMotorStepper -> display(maintenance_real_motor_stepper);
+
+    if(maintenance_motor_stepper_injection_status == 0)
+    {
+        ui-> motorStepper_injectionStatus->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui-> motorStepper_injectionStatus->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
+    if(maintenance_motor_stepper_zero_pos_status == 0)
+    {
+        ui-> motorStepper_zeroPosStatus->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+    else
+    {
+        ui-> motorStepper_zeroPosStatus->setStyleSheet("background-color: #3498db; color: #ffffff;");
+    }
+
 }
 
 void MainWindow::on_pushButton_5_clicked(bool checked)
@@ -672,11 +771,11 @@ void MainWindow::on_spinBox_12_valueChanged(int arg1)
     dialys_mode_input[3] = arg1;
 }
 
-
-void MainWindow::on_tabWidget_currentChanged(int index)
+void MainWindow::on_tabWidget_1_currentChanged(int index)
 {
     index_H1 = index;
 }
+
 
 void MainWindow::on_tabWidget_2_currentChanged(int index)
 {
@@ -695,6 +794,20 @@ void MainWindow::on_tabWidget_4_currentChanged(int index)
     index_H2_dialys = index;
 }
 
+void MainWindow::on_tabWidget_5_currentChanged(int index)
+{
+    index_H2_maintenance = index;
+}
+
+void MainWindow::on_tabWidget_6_currentChanged(int index)
+{
+    index_H3_maintenance_1 = index;
+}
+
+void MainWindow::on_tabWidget_7_currentChanged(int index)
+{
+    index_H3_maintenance_2 = index;
+}
 
 void MainWindow::on_buttonStart_clicked(bool checked)
 {
@@ -1192,4 +1305,53 @@ void MainWindow::on_buttonValve_32_clicked(bool checked)
         ui->buttonValve_32->setStyleSheet("background-color: #FFFFFF; color: #000000;");
     }
 }
+
+
+void MainWindow::on_setpointMotorPeristaltik_valueChanged(int arg1)
+{
+    maintenance_setpoint_motor_peristaltik = arg1;
+}
+
+
+void MainWindow::on_setpointMotorDAC1_valueChanged(int arg1)
+{
+    maintenance_setpoint_motor_DAC_1 = arg1;
+}
+
+
+void MainWindow::on_setpointMotorDAC2_valueChanged(int arg1)
+{
+    maintenance_setpoint_motor_DAC_2 = arg1;
+}
+
+
+void MainWindow::on_setpointMotorPump1_valueChanged(int arg1)
+{
+    maintenance_setpoint_motor_pump_1 = arg1;
+}
+
+
+void MainWindow::on_setpointMotorPump2_valueChanged(int arg1)
+{
+    maintenance_setpoint_motor_pump_2 = arg1;
+}
+
+
+void MainWindow::on_setpointMotorPump3_valueChanged(int arg1)
+{
+    maintenance_setpoint_motor_pump_3 = arg1;
+}
+
+
+void MainWindow::on_setpointMotorStepper_valueChanged(int arg1)
+{
+    maintenance_setpoint_motor_stepper = arg1;
+}
+
+
+
+
+
+
+
 

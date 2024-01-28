@@ -17,6 +17,9 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+protected:
+    void showEvent(QShowEvent *event) override;
+
 private slots:
     void on_pushButton_clicked(bool checked);
 
@@ -69,8 +72,6 @@ private slots:
     void on_spinBox_11_valueChanged(int arg1);
 
     void on_spinBox_12_valueChanged(int arg1);
-
-    void on_tabWidget_currentChanged(int index);
 
     void on_tabWidget_2_currentChanged(int index);
 
@@ -146,7 +147,30 @@ private slots:
 
     void on_buttonValve_32_clicked(bool checked);
 
+    void on_setpointMotorPeristaltik_valueChanged(int arg1);
+
+    void on_setpointMotorDAC1_valueChanged(int arg1);
+
+    void on_setpointMotorDAC2_valueChanged(int arg1);
+
+    void on_setpointMotorPump1_valueChanged(int arg1);
+
+    void on_setpointMotorPump2_valueChanged(int arg1);
+
+    void on_setpointMotorPump3_valueChanged(int arg1);
+
+    void on_setpointMotorStepper_valueChanged(int arg1);
+
+    void on_tabWidget_5_currentChanged(int index);
+
+    void on_tabWidget_6_currentChanged(int index);
+
+    void on_tabWidget_7_currentChanged(int index);
+
+    void on_tabWidget_1_currentChanged(int index);
+
 private:
+    bool firstTimeShown;
     Ui::MainWindow *ui;
     QTimer *updateTimer;
 
