@@ -10,6 +10,76 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    QImage originalImage("C:/Users/adamm/OneDrive - Institut Teknologi Sepuluh Nopember/Dokumen/test1/valve.png");
+    int widht_valve  = ui->label_valve_v55->width();
+    int height_valve = ui->label_valve_v55->height();
+
+    redImage = convertToRed(originalImage.scaled(widht_valve, height_valve, Qt::KeepAspectRatio));
+
+    oriPixmap = QPixmap::fromImage(originalImage.scaled(widht_valve, height_valve, Qt::KeepAspectRatio));
+    redPixmap = QPixmap::fromImage(redImage);
+
+    QImage originalImageRotate("C:/Users/adamm/OneDrive - Institut Teknologi Sepuluh Nopember/Dokumen/test1/valve_rotate.png");
+    int widht_valve_rotate  = ui->label_valve_v11->width();
+    int height_valve_rotate = ui->label_valve_v11->height();
+
+    redImageRotate = convertToRed(originalImageRotate.scaled(widht_valve_rotate, height_valve_rotate, Qt::KeepAspectRatio));
+
+    oriPixmapRotate = QPixmap::fromImage(originalImageRotate.scaled(widht_valve_rotate, height_valve_rotate, Qt::KeepAspectRatio));
+    redPixmapRotate = QPixmap::fromImage(redImageRotate);
+
+    QImage originalImageCircle("C:/Users/adamm/OneDrive - Institut Teknologi Sepuluh Nopember/Dokumen/test1/valve_circle.png");
+    int widht_valve_circle  = ui->label_valve_p1->width();
+    int height_valve_circle = ui->label_valve_p1->height();
+
+    redImageCircle = convertToRed(originalImageCircle.scaled(widht_valve_circle, height_valve_circle, Qt::KeepAspectRatio));
+
+    oriPixmapCircle = QPixmap::fromImage(originalImageCircle.scaled(widht_valve_circle, height_valve_circle, Qt::KeepAspectRatio));
+    redPixmapCircle = QPixmap::fromImage(redImageCircle);
+
+
+    ui->label_valve_v55->setPixmap(oriPixmap);
+    ui->label_valve_v1->setPixmap(oriPixmap);
+    ui->label_valve_h1->setPixmap(oriPixmap);
+    ui->label_valve_h2->setPixmap(oriPixmap);
+    ui->label_valve_p1->setPixmap(oriPixmapCircle);
+    ui->label_valve_fs1->setPixmap(oriPixmap);
+    ui->label_valve_v21->setPixmap(oriPixmap);
+    ui->label_valve_v11->setPixmap(oriPixmapRotate);
+    ui->label_valve_v34->setPixmap(oriPixmapRotate);
+    ui->label_valve_p4->setPixmap(oriPixmapCircle);
+    ui->label_valve_v25->setPixmap(oriPixmap);
+    ui->label_valve_v33->setPixmap(oriPixmap);
+    ui->label_valve_p3->setPixmap(oriPixmapCircle);
+    ui->label_valve_v45->setPixmap(oriPixmapRotate);
+    ui->label_valve_v46->setPixmap(oriPixmapRotate);
+    ui->label_valve_v43->setPixmap(oriPixmap);
+    ui->label_valve_v35->setPixmap(oriPixmap);
+    ui->label_valve_v6a->setPixmap(oriPixmap);
+    ui->label_valve_v6b->setPixmap(oriPixmap);
+    ui->label_valve_v5a->setPixmap(oriPixmap);
+    ui->label_valve_v5b->setPixmap(oriPixmap);
+    ui->label_valve_v10->setPixmap(oriPixmapRotate);
+    ui->label_valve_v4->setPixmap(oriPixmapRotate);
+    ui->label_valve_ufp->setPixmap(oriPixmapCircle);
+    ui->label_valve_v8a->setPixmap(oriPixmap);
+    ui->label_valve_v8b->setPixmap(oriPixmap);
+    ui->label_valve_v9a->setPixmap(oriPixmap);
+    ui->label_valve_v9b->setPixmap(oriPixmapRotate);
+    ui->label_valve_v7a->setPixmap(oriPixmap);
+    ui->label_valve_v7b->setPixmap(oriPixmap);
+    ui->label_valve_v57->setPixmap(oriPixmap);
+    ui->label_valve_v17->setPixmap(oriPixmap);
+    ui->label_valve_v56->setPixmap(oriPixmap);
+    ui->label_valve_v12->setPixmap(oriPixmap);
+    ui->label_valve_fs3->setPixmap(oriPixmapRotate);
+    ui->label_valve_fsw->setPixmap(oriPixmapCircle);
+    ui->label_valve_p2->setPixmap(oriPixmapCircle);
+    ui->label_valve_v19->setPixmap(oriPixmapRotate);
+    ui->label_valve_elisio->setPixmap(oriPixmap);
+    ui->label_valve_fs2->setPixmap(oriPixmap);
+
+
     //Tab Widget to index 0
     for (int i = 1; i <= 7; ++i) {
         QString tabWidgetObjectName = QString("tabWidget_%1").arg(i);
@@ -597,6 +667,12 @@ void MainWindow::updateValue()
     {
         ui-> motorStepper_zeroPosStatus->setStyleSheet("background-color: #3498db; color: #ffffff;");
     }
+
+    //Maintenance For Diagram
+    // if(rinse_mode_output[0] == 1)
+    // {
+    //     rinse_
+    // }
 
 }
 
@@ -1348,10 +1424,704 @@ void MainWindow::on_setpointMotorStepper_valueChanged(int arg1)
     maintenance_setpoint_motor_stepper = arg1;
 }
 
+QImage MainWindow::convertToRed(const QImage &image)
+{
+    QImage redImage = image;
+
+    for (int y = 0; y < redImage.height(); ++y) {
+        for (int x = 0; x < redImage.width(); ++x) {
+            QRgb pixel = redImage.pixel(x, y);
+
+            // Set the red channel to its maximum value (255)
+            // redImage.setPixel(x, y, qRgb(255, 0, 0));
+
+            if (qRed(pixel) == 255 && qGreen(pixel) == 255 && qBlue(pixel) == 255) {
+                // Set the pixel to red
+                redImage.setPixel(x, y, qRgb(255, 0, 0));
+            }
+        }
+    }
+
+    return redImage;
+}
 
 
+void MainWindow::on_button_valve_v55_clicked(bool checked)
+{
+    if(maintenance_button_valve_v55 == 0)
+    {
+        maintenance_button_valve_v55 = 1;
+        ui->label_valve_v55->setPixmap(redPixmap);
+        ui->button_valve_v55->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v55 = 0;
+        ui->label_valve_v55->setPixmap(oriPixmap);
+        ui->button_valve_v55->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
 
 
+void MainWindow::on_button_valve_ufp_clicked(bool checked)
+{
+    if(maintenance_button_valve_ufp == 0)
+    {
+        maintenance_button_valve_ufp = 1;
+        ui->label_valve_ufp->setPixmap(redPixmapCircle);
+        ui->button_valve_ufp->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_ufp = 0;
+        ui->label_valve_ufp->setPixmap(oriPixmapCircle);
+        ui->button_valve_ufp->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
 
 
+void MainWindow::on_button_valve_v19_clicked(bool checked)
+{
+    if(maintenance_button_valve_v19 == 0)
+    {
+        maintenance_button_valve_v19 = 1;
+        ui->label_valve_v19->setPixmap(redPixmapRotate);
+        ui->button_valve_v19->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v19 = 0;
+        ui->label_valve_v19->setPixmap(oriPixmapRotate);
+        ui->button_valve_v19->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v9a_clicked(bool checked)
+{
+    if(maintenance_button_valve_v9a == 0)
+    {
+        maintenance_button_valve_v9a = 1;
+        ui->label_valve_v9a->setPixmap(redPixmap);
+        ui->button_valve_v9a->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v9a = 0;
+        ui->label_valve_v9a->setPixmap(oriPixmap);
+        ui->button_valve_v9a->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v9b_clicked(bool checked)
+{
+    if(maintenance_button_valve_v9b == 0)
+    {
+        maintenance_button_valve_v9b = 1;
+        ui->label_valve_v9b->setPixmap(redPixmapRotate);
+        ui->button_valve_v9b->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v9b = 0;
+        ui->label_valve_v9b->setPixmap(oriPixmapRotate);
+        ui->button_valve_v9b->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_elisio_clicked(bool checked)
+{
+    if(maintenance_button_valve_elisio == 0)
+    {
+        maintenance_button_valve_elisio = 1;
+        ui->label_valve_elisio->setPixmap(redPixmap);
+        ui->button_valve_elisio->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_elisio = 0;
+        ui->label_valve_elisio->setPixmap(oriPixmap);
+        ui->button_valve_elisio->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_fs2_clicked(bool checked)
+{
+    if(maintenance_button_valve_fs2 == 0)
+    {
+        maintenance_button_valve_fs2 = 1;
+        ui->label_valve_fs2->setPixmap(redPixmap);
+        ui->button_valve_fs2->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_fs2 = 0;
+        ui->label_valve_fs2->setPixmap(oriPixmap);
+        ui->button_valve_fs2->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v10_clicked(bool checked)
+{
+    if(maintenance_button_valve_v10 == 0)
+    {
+        maintenance_button_valve_v10 = 1;
+        ui->label_valve_v10->setPixmap(redPixmapRotate);
+        ui->button_valve_v10->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v10 = 0;
+        ui->label_valve_v10->setPixmap(oriPixmapRotate);
+        ui->button_valve_v10->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v4_clicked(bool checked)
+{
+    if(maintenance_button_valve_v4 == 0)
+    {
+        maintenance_button_valve_v4 = 1;
+        ui->label_valve_v4->setPixmap(redPixmapRotate);
+        ui->button_valve_v4->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v4 = 0;
+        ui->label_valve_v4->setPixmap(oriPixmapRotate);
+        ui->button_valve_v4->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v57_clicked(bool checked)
+{
+    if(maintenance_button_valve_v57 == 0)
+    {
+        maintenance_button_valve_v57 = 1;
+        ui->label_valve_v57->setPixmap(redPixmap);
+        ui->button_valve_v57->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v57 = 0;
+        ui->label_valve_v57->setPixmap(oriPixmap);
+        ui->button_valve_v57->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v17_clicked(bool checked)
+{
+    if(maintenance_button_valve_v17 == 0)
+    {
+        maintenance_button_valve_v17 = 1;
+        ui->label_valve_v17->setPixmap(redPixmap);
+        ui->button_valve_v17->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v17 = 0;
+        ui->label_valve_v17->setPixmap(oriPixmap);
+        ui->button_valve_v17->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v56_clicked(bool checked)
+{
+    if(maintenance_button_valve_v56 == 0)
+    {
+        maintenance_button_valve_v56 = 1;
+        ui->label_valve_v56->setPixmap(redPixmap);
+        ui->button_valve_v56->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v56 = 0;
+        ui->label_valve_v56->setPixmap(oriPixmap);
+        ui->button_valve_v56->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v12_clicked(bool checked)
+{
+    if(maintenance_button_valve_v12 == 0)
+    {
+        maintenance_button_valve_v12 = 1;
+        ui->label_valve_v12->setPixmap(redPixmap);
+        ui->button_valve_v12->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v12 = 0;
+        ui->label_valve_v12->setPixmap(oriPixmap);
+        ui->button_valve_v12->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_fs3_clicked(bool checked)
+{
+    if(maintenance_button_valve_fs3 == 0)
+    {
+        maintenance_button_valve_fs3 = 1;
+        ui->label_valve_fs3->setPixmap(redPixmapRotate);
+        ui->button_valve_fs3->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_fs3 = 0;
+        ui->label_valve_fs3->setPixmap(oriPixmapRotate);
+        ui->button_valve_fs3->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_fsw_clicked(bool checked)
+{
+    if(maintenance_button_valve_fsw == 0)
+    {
+        maintenance_button_valve_fsw = 1;
+        ui->label_valve_fsw->setPixmap(redPixmapCircle);
+        ui->button_valve_fsw->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_fsw = 0;
+        ui->label_valve_fsw->setPixmap(oriPixmapCircle);
+        ui->button_valve_fsw->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_p2_clicked(bool checked)
+{
+    if(maintenance_button_valve_p2 == 0)
+    {
+        maintenance_button_valve_p2 = 1;
+        ui->label_valve_p2->setPixmap(redPixmapCircle);
+        ui->button_valve_p2->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_p2 = 0;
+        ui->label_valve_p2->setPixmap(oriPixmapCircle);
+        ui->button_valve_p2->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v35_clicked(bool checked)
+{
+    if(maintenance_button_valve_v35 == 0)
+    {
+        maintenance_button_valve_v35 = 1;
+        ui->label_valve_v35->setPixmap(redPixmap);
+        ui->button_valve_v35->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v35 = 0;
+        ui->label_valve_v35->setPixmap(oriPixmap);
+        ui->button_valve_v35->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v6a_clicked(bool checked)
+{
+    if(maintenance_button_valve_v6a == 0)
+    {
+        maintenance_button_valve_v6a = 1;
+        ui->label_valve_v6a->setPixmap(redPixmap);
+        ui->button_valve_v6a->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v6a = 0;
+        ui->label_valve_v6a->setPixmap(oriPixmap);
+        ui->button_valve_v6a->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v6b_clicked(bool checked)
+{
+    if(maintenance_button_valve_v6b == 0)
+    {
+        maintenance_button_valve_v6b = 1;
+        ui->label_valve_v6b->setPixmap(redPixmap);
+        ui->button_valve_v6b->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v6b = 0;
+        ui->label_valve_v6b->setPixmap(oriPixmap);
+        ui->button_valve_v6b->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v5a_clicked(bool checked)
+{
+    if(maintenance_button_valve_v5a == 0)
+    {
+        maintenance_button_valve_v5a = 1;
+        ui->label_valve_v5a->setPixmap(redPixmap);
+        ui->button_valve_v5a->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v5a = 0;
+        ui->label_valve_v5a->setPixmap(oriPixmap);
+        ui->button_valve_v5a->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v5b_clicked(bool checked)
+{
+    if(maintenance_button_valve_v5b == 0)
+    {
+        maintenance_button_valve_v5b = 1;
+        ui->label_valve_v5b->setPixmap(redPixmap);
+        ui->button_valve_v5b->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v5b = 0;
+        ui->label_valve_v5b->setPixmap(oriPixmap);
+        ui->button_valve_v5b->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v7a_clicked(bool checked)
+{
+    if(maintenance_button_valve_v7a == 0)
+    {
+        maintenance_button_valve_v7a = 1;
+        ui->label_valve_v7a->setPixmap(redPixmap);
+        ui->button_valve_v7a->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v7a = 0;
+        ui->label_valve_v7a->setPixmap(oriPixmap);
+        ui->button_valve_v7a->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v7b_clicked(bool checked)
+{
+    if(maintenance_button_valve_v7b == 0)
+    {
+        maintenance_button_valve_v7b = 1;
+        ui->label_valve_v7b->setPixmap(redPixmap);
+        ui->button_valve_v7b->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v7b = 0;
+        ui->label_valve_v7b->setPixmap(oriPixmap);
+        ui->button_valve_v7b->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v8a_clicked(bool checked)
+{
+    if(maintenance_button_valve_v8a == 0)
+    {
+        maintenance_button_valve_v8a = 1;
+        ui->label_valve_v8a->setPixmap(redPixmap);
+        ui->button_valve_v8a->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v8a = 0;
+        ui->label_valve_v8a->setPixmap(oriPixmap);
+        ui->button_valve_v8a->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v8b_clicked(bool checked)
+{
+    if(maintenance_button_valve_v8b == 0)
+    {
+        maintenance_button_valve_v8b = 1;
+        ui->label_valve_v8b->setPixmap(redPixmap);
+        ui->button_valve_v8b->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v8b = 0;
+        ui->label_valve_v8b->setPixmap(oriPixmap);
+        ui->button_valve_v8b->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v1_clicked(bool checked)
+{
+    if(maintenance_button_valve_v1 == 0)
+    {
+        maintenance_button_valve_v1 = 1;
+        ui->label_valve_v1->setPixmap(redPixmap);
+        ui->button_valve_v1->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v1 = 0;
+        ui->label_valve_v1->setPixmap(oriPixmap);
+        ui->button_valve_v1->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_h1_clicked(bool checked)
+{
+    if(maintenance_button_valve_h1 == 0)
+    {
+        maintenance_button_valve_h1 = 1;
+        ui->label_valve_h1->setPixmap(redPixmap);
+        ui->button_valve_h1->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_h1 = 0;
+        ui->label_valve_h1->setPixmap(oriPixmap);
+        ui->button_valve_h1->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_h2_clicked(bool checked)
+{
+    if(maintenance_button_valve_h2 == 0)
+    {
+        maintenance_button_valve_h2 = 1;
+        ui->label_valve_h2->setPixmap(redPixmap);
+        ui->button_valve_h2->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_h2 = 0;
+        ui->label_valve_h2->setPixmap(oriPixmap);
+        ui->button_valve_h2->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_p1_clicked(bool checked)
+{
+    if(maintenance_button_valve_p1 == 0)
+    {
+        maintenance_button_valve_p1 = 1;
+        ui->label_valve_p1->setPixmap(redPixmapCircle);
+        ui->button_valve_p1->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_p1 = 0;
+        ui->label_valve_p1->setPixmap(oriPixmapCircle);
+        ui->button_valve_p1->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_fs1_clicked(bool checked)
+{
+    if(maintenance_button_valve_fs1 == 0)
+    {
+        maintenance_button_valve_fs1 = 1;
+        ui->label_valve_fs1->setPixmap(redPixmap);
+        ui->button_valve_fs1->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_fs1 = 0;
+        ui->label_valve_fs1->setPixmap(oriPixmap);
+        ui->button_valve_fs1->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v21_clicked(bool checked)
+{
+    if(maintenance_button_valve_v21 == 0)
+    {
+        maintenance_button_valve_v21 = 1;
+        ui->label_valve_v21->setPixmap(redPixmap);
+        ui->button_valve_v21->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v21 = 0;
+        ui->label_valve_v21->setPixmap(oriPixmap);
+        ui->button_valve_v21->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v34_clicked(bool checked)
+{
+    if(maintenance_button_valve_v34 == 0)
+    {
+        maintenance_button_valve_v34 = 1;
+        ui->label_valve_v34->setPixmap(redPixmapRotate);
+        ui->button_valve_v34->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v34 = 0;
+        ui->label_valve_v34->setPixmap(oriPixmapRotate);
+        ui->button_valve_v34->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_p4_clicked(bool checked)
+{
+    if(maintenance_button_valve_p4 == 0)
+    {
+        maintenance_button_valve_p4 = 1;
+        ui->label_valve_p4->setPixmap(redPixmapCircle);
+        ui->button_valve_p4->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_p4 = 0;
+        ui->label_valve_p4->setPixmap(oriPixmapCircle);
+        ui->button_valve_p4->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v25_clicked(bool checked)
+{
+    if(maintenance_button_valve_v25 == 0)
+    {
+        maintenance_button_valve_v25 = 1;
+        ui->label_valve_v25->setPixmap(redPixmap);
+        ui->button_valve_v25->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v25 = 0;
+        ui->label_valve_v25->setPixmap(oriPixmap);
+        ui->button_valve_v25->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v11_clicked(bool checked)
+{
+    if(maintenance_button_valve_v11 == 0)
+    {
+        maintenance_button_valve_v1 = 1;
+        ui->label_valve_v11->setPixmap(redPixmapRotate);
+        ui->button_valve_v11->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v11 = 0;
+        ui->label_valve_v11->setPixmap(oriPixmapRotate);
+        ui->button_valve_v11->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v33_clicked(bool checked)
+{
+    if(maintenance_button_valve_v33 == 0)
+    {
+        maintenance_button_valve_v33 = 1;
+        ui->label_valve_v33->setPixmap(redPixmap);
+        ui->button_valve_v33->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v33 = 0;
+        ui->label_valve_v33->setPixmap(oriPixmap);
+        ui->button_valve_v33->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_p3_clicked(bool checked)
+{
+    if(maintenance_button_valve_p3 == 0)
+    {
+        maintenance_button_valve_p3 = 1;
+        ui->label_valve_p3->setPixmap(redPixmapCircle);
+        ui->button_valve_p3->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_p3 = 0;
+        ui->label_valve_p3->setPixmap(oriPixmapCircle);
+        ui->button_valve_p3->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v43_clicked(bool checked)
+{
+    if(maintenance_button_valve_v43 == 0)
+    {
+        maintenance_button_valve_v43 = 1;
+        ui->label_valve_v43->setPixmap(redPixmap);
+        ui->button_valve_v43->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v43 = 0;
+        ui->label_valve_v43->setPixmap(oriPixmap);
+        ui->button_valve_v43->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v45_clicked(bool checked)
+{
+    if(maintenance_button_valve_v45 == 0)
+    {
+        maintenance_button_valve_v45 = 1;
+        ui->label_valve_v45->setPixmap(redPixmapRotate);
+        ui->button_valve_v45->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v45 = 0;
+        ui->label_valve_v45->setPixmap(oriPixmapRotate);
+        ui->button_valve_v45->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
+
+
+void MainWindow::on_button_valve_v46_clicked(bool checked)
+{
+    if(maintenance_button_valve_v46 == 0)
+    {
+        maintenance_button_valve_v46 = 1;
+        ui->label_valve_v46->setPixmap(redPixmapRotate);
+        ui->button_valve_v46->setStyleSheet("background-color: #FF0000; color: #ffffff;");
+    }
+    else
+    {
+        maintenance_button_valve_v46 = 0;
+        ui->label_valve_v46->setPixmap(oriPixmapRotate);
+        ui->button_valve_v46->setStyleSheet("background-color: #FFFFFF; color: #000000;");
+    }
+}
 

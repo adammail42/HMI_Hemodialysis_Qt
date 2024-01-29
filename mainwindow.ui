@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1283</width>
-    <height>873</height>
+    <width>1515</width>
+    <height>973</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -51,7 +51,7 @@
        <enum>QTabWidget::Triangular</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>3</number>
       </property>
       <property name="movable">
        <bool>true</bool>
@@ -1231,7 +1231,7 @@
            <enum>QTabWidget::Triangular</enum>
           </property>
           <property name="currentIndex">
-           <number>1</number>
+           <number>2</number>
           </property>
           <widget class="QWidget" name="tab_8">
            <attribute name="title">
@@ -2559,6 +2559,22 @@
                 <string>Motor DAC 1</string>
                </attribute>
                <layout class="QGridLayout" name="gridLayout_19">
+                <item row="2" column="0">
+                 <widget class="QLabel" name="label_76">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Setpoint Kecepatan</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
                 <item row="0" column="0" colspan="2">
                  <widget class="QLabel" name="label_75">
                   <property name="sizePolicy">
@@ -2581,27 +2597,11 @@
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="0">
-                 <widget class="QSpinBox" name="setpointMotorDAC1"/>
-                </item>
                 <item row="1" column="1">
                  <widget class="QLCDNumber" name="realMotorDAC1"/>
                 </item>
-                <item row="2" column="0">
-                 <widget class="QLabel" name="label_76">
-                  <property name="font">
-                   <font>
-                    <pointsize>10</pointsize>
-                    <bold>true</bold>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>Setpoint Kecepatan</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignCenter</set>
-                  </property>
-                 </widget>
+                <item row="1" column="0">
+                 <widget class="QSpinBox" name="setpointMotorDAC1"/>
                 </item>
                 <item row="2" column="1">
                  <widget class="QLabel" name="label_74">
@@ -2990,6 +2990,2186 @@
            <attribute name="title">
             <string>Maintenance</string>
            </attribute>
+           <widget class="QLabel" name="label_valve_v55">
+            <property name="geometry">
+             <rect>
+              <x>40</x>
+              <y>100</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V55</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v55">
+            <property name="geometry">
+             <rect>
+              <x>1310</x>
+              <y>260</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V55</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v1">
+            <property name="geometry">
+             <rect>
+              <x>170</x>
+              <y>100</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V1</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_h1">
+            <property name="geometry">
+             <rect>
+              <x>310</x>
+              <y>100</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>H1</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_h2">
+            <property name="geometry">
+             <rect>
+              <x>460</x>
+              <y>100</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>H2</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_p1">
+            <property name="geometry">
+             <rect>
+              <x>590</x>
+              <y>100</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>P1</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_fs1">
+            <property name="geometry">
+             <rect>
+              <x>710</x>
+              <y>100</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>FS1</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v21">
+            <property name="geometry">
+             <rect>
+              <x>770</x>
+              <y>30</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V21</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v1">
+            <property name="geometry">
+             <rect>
+              <x>1310</x>
+              <y>310</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V1</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_h1">
+            <property name="geometry">
+             <rect>
+              <x>1310</x>
+              <y>360</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>H1</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_h2">
+            <property name="geometry">
+             <rect>
+              <x>1310</x>
+              <y>410</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>H2</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_p1">
+            <property name="geometry">
+             <rect>
+              <x>1310</x>
+              <y>460</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>P1</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_fs1">
+            <property name="geometry">
+             <rect>
+              <x>1310</x>
+              <y>510</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>FS1</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v21">
+            <property name="geometry">
+             <rect>
+              <x>1310</x>
+              <y>560</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V21</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v11">
+            <property name="geometry">
+             <rect>
+              <x>1090</x>
+              <y>160</y>
+              <width>50</width>
+              <height>100</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V11</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v34">
+            <property name="geometry">
+             <rect>
+              <x>280</x>
+              <y>140</y>
+              <width>50</width>
+              <height>100</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V34</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_p4">
+            <property name="geometry">
+             <rect>
+              <x>820</x>
+              <y>160</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>P4</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v25">
+            <property name="geometry">
+             <rect>
+              <x>950</x>
+              <y>160</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V25</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v34">
+            <property name="geometry">
+             <rect>
+              <x>1370</x>
+              <y>260</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V34</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_p4">
+            <property name="geometry">
+             <rect>
+              <x>1370</x>
+              <y>310</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>P4</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v25">
+            <property name="geometry">
+             <rect>
+              <x>1370</x>
+              <y>360</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V25</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v11">
+            <property name="geometry">
+             <rect>
+              <x>1370</x>
+              <y>410</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V11</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v33">
+            <property name="geometry">
+             <rect>
+              <x>470</x>
+              <y>200</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V33</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_p3">
+            <property name="geometry">
+             <rect>
+              <x>820</x>
+              <y>240</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>P3</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v45">
+            <property name="geometry">
+             <rect>
+              <x>940</x>
+              <y>270</y>
+              <width>50</width>
+              <height>100</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V45</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v46">
+            <property name="geometry">
+             <rect>
+              <x>940</x>
+              <y>380</y>
+              <width>50</width>
+              <height>100</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V46</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v43">
+            <property name="geometry">
+             <rect>
+              <x>1020</x>
+              <y>240</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V43</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v33">
+            <property name="geometry">
+             <rect>
+              <x>1370</x>
+              <y>460</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V33</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_p3">
+            <property name="geometry">
+             <rect>
+              <x>1370</x>
+              <y>510</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>P3</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v43">
+            <property name="geometry">
+             <rect>
+              <x>1370</x>
+              <y>560</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V43</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v45">
+            <property name="geometry">
+             <rect>
+              <x>1370</x>
+              <y>610</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V45</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v46">
+            <property name="geometry">
+             <rect>
+              <x>1370</x>
+              <y>660</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V46</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v35">
+            <property name="geometry">
+             <rect>
+              <x>340</x>
+              <y>280</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V35</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v6a">
+            <property name="geometry">
+             <rect>
+              <x>530</x>
+              <y>280</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V6A</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v5a">
+            <property name="geometry">
+             <rect>
+              <x>690</x>
+              <y>280</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V5A</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v6b">
+            <property name="geometry">
+             <rect>
+              <x>530</x>
+              <y>350</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V6B</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v5b">
+            <property name="geometry">
+             <rect>
+              <x>690</x>
+              <y>350</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V5B</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v8b">
+            <property name="geometry">
+             <rect>
+              <x>530</x>
+              <y>510</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V8B</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v8a">
+            <property name="geometry">
+             <rect>
+              <x>530</x>
+              <y>440</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V8A</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v7a">
+            <property name="geometry">
+             <rect>
+              <x>690</x>
+              <y>440</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V7A</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v7b">
+            <property name="geometry">
+             <rect>
+              <x>690</x>
+              <y>510</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V7B</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v35">
+            <property name="geometry">
+             <rect>
+              <x>1250</x>
+              <y>260</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V35</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v6a">
+            <property name="geometry">
+             <rect>
+              <x>1250</x>
+              <y>310</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V6A</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v6b">
+            <property name="geometry">
+             <rect>
+              <x>1250</x>
+              <y>360</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V6B</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v5a">
+            <property name="geometry">
+             <rect>
+              <x>1250</x>
+              <y>410</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V5A</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v5b">
+            <property name="geometry">
+             <rect>
+              <x>1250</x>
+              <y>460</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V5B</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v7a">
+            <property name="geometry">
+             <rect>
+              <x>1250</x>
+              <y>510</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V7A</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v7b">
+            <property name="geometry">
+             <rect>
+              <x>1250</x>
+              <y>560</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V7B</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v8a">
+            <property name="geometry">
+             <rect>
+              <x>1250</x>
+              <y>610</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V8A</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v8b">
+            <property name="geometry">
+             <rect>
+              <x>1250</x>
+              <y>660</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V8B</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v10">
+            <property name="geometry">
+             <rect>
+              <x>200</x>
+              <y>340</y>
+              <width>50</width>
+              <height>100</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V10</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v17">
+            <property name="geometry">
+             <rect>
+              <x>140</x>
+              <y>460</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V17</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v12">
+            <property name="geometry">
+             <rect>
+              <x>140</x>
+              <y>530</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V12</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v57">
+            <property name="geometry">
+             <rect>
+              <x>30</x>
+              <y>460</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V57</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v56">
+            <property name="geometry">
+             <rect>
+              <x>30</x>
+              <y>530</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V56</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v4">
+            <property name="geometry">
+             <rect>
+              <x>280</x>
+              <y>340</y>
+              <width>50</width>
+              <height>100</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V4</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v57">
+            <property name="geometry">
+             <rect>
+              <x>1190</x>
+              <y>360</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V57</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v17">
+            <property name="geometry">
+             <rect>
+              <x>1190</x>
+              <y>410</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V17</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v4">
+            <property name="geometry">
+             <rect>
+              <x>1190</x>
+              <y>310</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V4</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v10">
+            <property name="geometry">
+             <rect>
+              <x>1190</x>
+              <y>260</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V10</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v12">
+            <property name="geometry">
+             <rect>
+              <x>1190</x>
+              <y>510</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V12</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v56">
+            <property name="geometry">
+             <rect>
+              <x>1190</x>
+              <y>460</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V56</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_fs3">
+            <property name="geometry">
+             <rect>
+              <x>200</x>
+              <y>570</y>
+              <width>50</width>
+              <height>100</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>FS3</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_fsw">
+            <property name="geometry">
+             <rect>
+              <x>270</x>
+              <y>580</y>
+              <width>50</width>
+              <height>100</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>FSW</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_p2">
+            <property name="geometry">
+             <rect>
+              <x>350</x>
+              <y>600</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>P2</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_fsw">
+            <property name="geometry">
+             <rect>
+              <x>1190</x>
+              <y>610</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>FSW</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_p2">
+            <property name="geometry">
+             <rect>
+              <x>1190</x>
+              <y>660</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>P2</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_fs3">
+            <property name="geometry">
+             <rect>
+              <x>1190</x>
+              <y>560</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>FS3</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_ufp">
+            <property name="geometry">
+             <rect>
+              <x>390</x>
+              <y>340</y>
+              <width>50</width>
+              <height>100</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>UFP</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_ufp">
+            <property name="geometry">
+             <rect>
+              <x>1130</x>
+              <y>260</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>UFP</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v9a">
+            <property name="geometry">
+             <rect>
+              <x>540</x>
+              <y>600</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V9A</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v19">
+            <property name="geometry">
+             <rect>
+              <x>470</x>
+              <y>600</y>
+              <width>50</width>
+              <height>100</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V19</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_elisio">
+            <property name="geometry">
+             <rect>
+              <x>540</x>
+              <y>680</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>ELISIO</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_v9b">
+            <property name="geometry">
+             <rect>
+              <x>610</x>
+              <y>600</y>
+              <width>50</width>
+              <height>100</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V9B</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_valve_fs2">
+            <property name="geometry">
+             <rect>
+              <x>730</x>
+              <y>600</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>FS2</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v19">
+            <property name="geometry">
+             <rect>
+              <x>1130</x>
+              <y>310</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V19</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_elisio">
+            <property name="geometry">
+             <rect>
+              <x>1130</x>
+              <y>460</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>ELISIO</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_fs2">
+            <property name="geometry">
+             <rect>
+              <x>1130</x>
+              <y>510</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>FS2</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v9a">
+            <property name="geometry">
+             <rect>
+              <x>1130</x>
+              <y>360</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V9A</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="button_valve_v9b">
+            <property name="geometry">
+             <rect>
+              <x>1130</x>
+              <y>410</y>
+              <width>60</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V9B</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>130</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V55</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_2">
+            <property name="geometry">
+             <rect>
+              <x>140</x>
+              <y>130</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V1</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_3">
+            <property name="geometry">
+             <rect>
+              <x>280</x>
+              <y>130</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>H1</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_4">
+            <property name="geometry">
+             <rect>
+              <x>430</x>
+              <y>130</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>H2</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_5">
+            <property name="geometry">
+             <rect>
+              <x>560</x>
+              <y>130</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>P1</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_6">
+            <property name="geometry">
+             <rect>
+              <x>680</x>
+              <y>130</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>FS1</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_7">
+            <property name="geometry">
+             <rect>
+              <x>750</x>
+              <y>60</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V21</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_8">
+            <property name="geometry">
+             <rect>
+              <x>280</x>
+              <y>170</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V34</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_9">
+            <property name="geometry">
+             <rect>
+              <x>450</x>
+              <y>230</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V33</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_10">
+            <property name="geometry">
+             <rect>
+              <x>790</x>
+              <y>190</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>P4</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_11">
+            <property name="geometry">
+             <rect>
+              <x>920</x>
+              <y>190</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V25</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_12">
+            <property name="geometry">
+             <rect>
+              <x>1090</x>
+              <y>190</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V11</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_13">
+            <property name="geometry">
+             <rect>
+              <x>1000</x>
+              <y>270</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V43</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_14">
+            <property name="geometry">
+             <rect>
+              <x>940</x>
+              <y>300</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V45</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_15">
+            <property name="geometry">
+             <rect>
+              <x>940</x>
+              <y>410</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V46</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_16">
+            <property name="geometry">
+             <rect>
+              <x>790</x>
+              <y>270</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>P3</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_17">
+            <property name="geometry">
+             <rect>
+              <x>670</x>
+              <y>310</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V5A</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_18">
+            <property name="geometry">
+             <rect>
+              <x>670</x>
+              <y>380</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V5B</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_19">
+            <property name="geometry">
+             <rect>
+              <x>510</x>
+              <y>310</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V6A</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_20">
+            <property name="geometry">
+             <rect>
+              <x>510</x>
+              <y>380</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V6B</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_21">
+            <property name="geometry">
+             <rect>
+              <x>510</x>
+              <y>470</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V8A</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_22">
+            <property name="geometry">
+             <rect>
+              <x>670</x>
+              <y>470</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V7A</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_23">
+            <property name="geometry">
+             <rect>
+              <x>670</x>
+              <y>540</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V7B</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_24">
+            <property name="geometry">
+             <rect>
+              <x>510</x>
+              <y>540</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V8B</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_25">
+            <property name="geometry">
+             <rect>
+              <x>310</x>
+              <y>310</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V35</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_26">
+            <property name="geometry">
+             <rect>
+              <x>360</x>
+              <y>400</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>UFP</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_27">
+            <property name="geometry">
+             <rect>
+              <x>250</x>
+              <y>400</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V4</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_28">
+            <property name="geometry">
+             <rect>
+              <x>170</x>
+              <y>400</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V10</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_29">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>490</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V17</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_30">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>490</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V57</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_31">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>560</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V56</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_32">
+            <property name="geometry">
+             <rect>
+              <x>120</x>
+              <y>560</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V12</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_33">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>600</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>FS3</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_34">
+            <property name="geometry">
+             <rect>
+              <x>250</x>
+              <y>650</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>FSW</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_35">
+            <property name="geometry">
+             <rect>
+              <x>330</x>
+              <y>650</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>P2</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_36">
+            <property name="geometry">
+             <rect>
+              <x>450</x>
+              <y>660</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V19</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_37">
+            <property name="geometry">
+             <rect>
+              <x>510</x>
+              <y>700</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>ELISIO</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_38">
+            <property name="geometry">
+             <rect>
+              <x>520</x>
+              <y>630</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V9A</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_39">
+            <property name="geometry">
+             <rect>
+              <x>590</x>
+              <y>660</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V9B</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_v55_40">
+            <property name="geometry">
+             <rect>
+              <x>710</x>
+              <y>630</y>
+              <width>100</width>
+              <height>50</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>FS2</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="Line" name="line">
+            <property name="geometry">
+             <rect>
+              <x>80</x>
+              <y>115</y>
+              <width>1100</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="lineWidth">
+             <number>3</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_2">
+            <property name="geometry">
+             <rect>
+              <x>810</x>
+              <y>175</y>
+              <width>171</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="lineWidth">
+             <number>3</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_3">
+            <property name="geometry">
+             <rect>
+              <x>810</x>
+              <y>255</y>
+              <width>275</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="lineWidth">
+             <number>3</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_4">
+            <property name="geometry">
+             <rect>
+              <x>510</x>
+              <y>295</y>
+              <width>260</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="lineWidth">
+             <number>3</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_5">
+            <property name="geometry">
+             <rect>
+              <x>510</x>
+              <y>365</y>
+              <width>260</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="lineWidth">
+             <number>3</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_6">
+            <property name="geometry">
+             <rect>
+              <x>510</x>
+              <y>455</y>
+              <width>260</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="lineWidth">
+             <number>3</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_7">
+            <property name="geometry">
+             <rect>
+              <x>510</x>
+              <y>525</y>
+              <width>260</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="lineWidth">
+             <number>3</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_8">
+            <property name="geometry">
+             <rect>
+              <x>260</x>
+              <y>615</y>
+              <width>525</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="lineWidth">
+             <number>3</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_9">
+            <property name="geometry">
+             <rect>
+              <x>480</x>
+              <y>695</y>
+              <width>150</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="lineWidth">
+             <number>3</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_10">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>475</y>
+              <width>215</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="lineWidth">
+             <number>3</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_11">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>545</y>
+              <width>215</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="lineWidth">
+             <number>3</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_12">
+            <property name="geometry">
+             <rect>
+              <x>174</x>
+              <y>215</y>
+              <width>591</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="lineWidth">
+             <number>3</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_13">
+            <property name="geometry">
+             <rect>
+              <x>710</x>
+              <y>45</y>
+              <width>171</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="lineWidth">
+             <number>3</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_14">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>295</y>
+              <width>400</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="lineWidth">
+             <number>3</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_15">
+            <property name="geometry">
+             <rect>
+              <x>330</x>
+              <y>380</y>
+              <width>170</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="lineWidth">
+             <number>3</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_16">
+            <property name="geometry">
+             <rect>
+              <x>215</x>
+              <y>127</y>
+              <width>20</width>
+              <height>601</height>
+             </rect>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="lineWidth">
+             <number>3</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_17">
+            <property name="geometry">
+             <rect>
+              <x>225</x>
+              <y>717</y>
+              <width>185</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="lineWidth">
+             <number>3</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_18">
+            <property name="geometry">
+             <rect>
+              <x>400</x>
+              <y>625</y>
+              <width>20</width>
+              <height>103</height>
+             </rect>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="lineWidth">
+             <number>3</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+           <widget class="Line" name="line_19">
+            <property name="geometry">
+             <rect>
+              <x>250</x>
+              <y>480</y>
+              <width>20</width>
+              <height>151</height>
+             </rect>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="lineWidth">
+             <number>3</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+           <zorder>line_18</zorder>
+           <zorder>line_17</zorder>
+           <zorder>line_16</zorder>
+           <zorder>line_14</zorder>
+           <zorder>line_9</zorder>
+           <zorder>line_8</zorder>
+           <zorder>line_5</zorder>
+           <zorder>line_7</zorder>
+           <zorder>line_11</zorder>
+           <zorder>line_10</zorder>
+           <zorder>line_15</zorder>
+           <zorder>line_6</zorder>
+           <zorder>line_4</zorder>
+           <zorder>line_3</zorder>
+           <zorder>line_13</zorder>
+           <zorder>line_12</zorder>
+           <zorder>line_2</zorder>
+           <zorder>line</zorder>
+           <zorder>label_valve_v55</zorder>
+           <zorder>button_valve_v55</zorder>
+           <zorder>label_valve_v1</zorder>
+           <zorder>label_valve_h1</zorder>
+           <zorder>label_valve_h2</zorder>
+           <zorder>label_valve_p1</zorder>
+           <zorder>label_valve_fs1</zorder>
+           <zorder>label_valve_v21</zorder>
+           <zorder>button_valve_v1</zorder>
+           <zorder>button_valve_h1</zorder>
+           <zorder>button_valve_h2</zorder>
+           <zorder>button_valve_p1</zorder>
+           <zorder>button_valve_fs1</zorder>
+           <zorder>button_valve_v21</zorder>
+           <zorder>label_valve_v11</zorder>
+           <zorder>label_valve_v34</zorder>
+           <zorder>label_valve_p4</zorder>
+           <zorder>label_valve_v25</zorder>
+           <zorder>button_valve_v34</zorder>
+           <zorder>button_valve_p4</zorder>
+           <zorder>button_valve_v25</zorder>
+           <zorder>button_valve_v11</zorder>
+           <zorder>label_valve_v33</zorder>
+           <zorder>label_valve_p3</zorder>
+           <zorder>label_valve_v45</zorder>
+           <zorder>label_valve_v46</zorder>
+           <zorder>label_valve_v43</zorder>
+           <zorder>button_valve_v33</zorder>
+           <zorder>button_valve_p3</zorder>
+           <zorder>button_valve_v43</zorder>
+           <zorder>button_valve_v45</zorder>
+           <zorder>button_valve_v46</zorder>
+           <zorder>label_valve_v35</zorder>
+           <zorder>label_valve_v6a</zorder>
+           <zorder>label_valve_v5a</zorder>
+           <zorder>label_valve_v6b</zorder>
+           <zorder>label_valve_v5b</zorder>
+           <zorder>label_valve_v8b</zorder>
+           <zorder>label_valve_v8a</zorder>
+           <zorder>label_valve_v7a</zorder>
+           <zorder>label_valve_v7b</zorder>
+           <zorder>button_valve_v35</zorder>
+           <zorder>button_valve_v6a</zorder>
+           <zorder>button_valve_v6b</zorder>
+           <zorder>button_valve_v5a</zorder>
+           <zorder>button_valve_v5b</zorder>
+           <zorder>button_valve_v7a</zorder>
+           <zorder>button_valve_v7b</zorder>
+           <zorder>button_valve_v8a</zorder>
+           <zorder>button_valve_v8b</zorder>
+           <zorder>label_valve_v10</zorder>
+           <zorder>label_valve_v17</zorder>
+           <zorder>label_valve_v12</zorder>
+           <zorder>label_valve_v57</zorder>
+           <zorder>label_valve_v56</zorder>
+           <zorder>label_valve_v4</zorder>
+           <zorder>button_valve_v57</zorder>
+           <zorder>button_valve_v17</zorder>
+           <zorder>button_valve_v4</zorder>
+           <zorder>button_valve_v10</zorder>
+           <zorder>button_valve_v12</zorder>
+           <zorder>button_valve_v56</zorder>
+           <zorder>label_valve_fs3</zorder>
+           <zorder>label_valve_fsw</zorder>
+           <zorder>label_valve_p2</zorder>
+           <zorder>button_valve_fsw</zorder>
+           <zorder>button_valve_p2</zorder>
+           <zorder>button_valve_fs3</zorder>
+           <zorder>label_valve_ufp</zorder>
+           <zorder>button_valve_ufp</zorder>
+           <zorder>label_valve_v9a</zorder>
+           <zorder>label_valve_v19</zorder>
+           <zorder>label_valve_elisio</zorder>
+           <zorder>label_valve_v9b</zorder>
+           <zorder>label_valve_fs2</zorder>
+           <zorder>button_valve_v19</zorder>
+           <zorder>button_valve_elisio</zorder>
+           <zorder>button_valve_fs2</zorder>
+           <zorder>button_valve_v9a</zorder>
+           <zorder>button_valve_v9b</zorder>
+           <zorder>label_name_v55</zorder>
+           <zorder>label_name_v55_2</zorder>
+           <zorder>label_name_v55_3</zorder>
+           <zorder>label_name_v55_4</zorder>
+           <zorder>label_name_v55_5</zorder>
+           <zorder>label_name_v55_6</zorder>
+           <zorder>label_name_v55_7</zorder>
+           <zorder>label_name_v55_8</zorder>
+           <zorder>label_name_v55_9</zorder>
+           <zorder>label_name_v55_10</zorder>
+           <zorder>label_name_v55_11</zorder>
+           <zorder>label_name_v55_12</zorder>
+           <zorder>label_name_v55_13</zorder>
+           <zorder>label_name_v55_14</zorder>
+           <zorder>label_name_v55_15</zorder>
+           <zorder>label_name_v55_16</zorder>
+           <zorder>label_name_v55_17</zorder>
+           <zorder>label_name_v55_18</zorder>
+           <zorder>label_name_v55_19</zorder>
+           <zorder>label_name_v55_20</zorder>
+           <zorder>label_name_v55_21</zorder>
+           <zorder>label_name_v55_22</zorder>
+           <zorder>label_name_v55_23</zorder>
+           <zorder>label_name_v55_24</zorder>
+           <zorder>label_name_v55_25</zorder>
+           <zorder>label_name_v55_26</zorder>
+           <zorder>label_name_v55_27</zorder>
+           <zorder>label_name_v55_28</zorder>
+           <zorder>label_name_v55_29</zorder>
+           <zorder>label_name_v55_30</zorder>
+           <zorder>label_name_v55_31</zorder>
+           <zorder>label_name_v55_32</zorder>
+           <zorder>label_name_v55_33</zorder>
+           <zorder>label_name_v55_34</zorder>
+           <zorder>label_name_v55_35</zorder>
+           <zorder>label_name_v55_36</zorder>
+           <zorder>label_name_v55_37</zorder>
+           <zorder>label_name_v55_38</zorder>
+           <zorder>label_name_v55_39</zorder>
+           <zorder>label_name_v55_40</zorder>
+           <zorder>line_19</zorder>
           </widget>
          </widget>
         </item>
@@ -3039,7 +5219,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1283</width>
+     <width>1515</width>
      <height>26</height>
     </rect>
    </property>

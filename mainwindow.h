@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QImage>
+#include <QPixmap>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -36,10 +38,6 @@ private slots:
     void on_spinBox_2_valueChanged(int arg1);
 
     void on_spinBox_4_valueChanged(int arg1);
-
-    void updateValue();
-
-
 
     void on_pushButton_5_clicked(bool checked);
 
@@ -169,10 +167,101 @@ private slots:
 
     void on_tabWidget_1_currentChanged(int index);
 
+    void updateValue();
+
+    QImage convertToRed(const QImage &image);
+
+    void on_button_valve_v55_clicked(bool checked);
+
+    void on_button_valve_ufp_clicked(bool checked);
+
+    void on_button_valve_v19_clicked(bool checked);
+
+    void on_button_valve_v9a_clicked(bool checked);
+
+    void on_button_valve_v9b_clicked(bool checked);
+
+    void on_button_valve_elisio_clicked(bool checked);
+
+    void on_button_valve_fs2_clicked(bool checked);
+
+    void on_button_valve_v10_clicked(bool checked);
+
+    void on_button_valve_v4_clicked(bool checked);
+
+    void on_button_valve_v57_clicked(bool checked);
+
+    void on_button_valve_v17_clicked(bool checked);
+
+    void on_button_valve_v56_clicked(bool checked);
+
+    void on_button_valve_v12_clicked(bool checked);
+
+    void on_button_valve_fs3_clicked(bool checked);
+
+    void on_button_valve_fsw_clicked(bool checked);
+
+    void on_button_valve_p2_clicked(bool checked);
+
+    void on_button_valve_v35_clicked(bool checked);
+
+    void on_button_valve_v6a_clicked(bool checked);
+
+    void on_button_valve_v6b_clicked(bool checked);
+
+
+    void on_button_valve_v5a_clicked(bool checked);
+
+    void on_button_valve_v5b_clicked(bool checked);
+
+    void on_button_valve_v7a_clicked(bool checked);
+
+    void on_button_valve_v7b_clicked(bool checked);
+
+    void on_button_valve_v8a_clicked(bool checked);
+
+    void on_button_valve_v8b_clicked(bool checked);
+
+    void on_button_valve_v1_clicked(bool checked);
+
+    void on_button_valve_h1_clicked(bool checked);
+
+    void on_button_valve_h2_clicked(bool checked);
+
+    void on_button_valve_p1_clicked(bool checked);
+
+    void on_button_valve_fs1_clicked(bool checked);
+
+    void on_button_valve_v21_clicked(bool checked);
+
+    void on_button_valve_v34_clicked(bool checked);
+
+    void on_button_valve_p4_clicked(bool checked);
+
+    void on_button_valve_v25_clicked(bool checked);
+
+    void on_button_valve_v11_clicked(bool checked);
+
+    void on_button_valve_v33_clicked(bool checked);
+
+    void on_button_valve_p3_clicked(bool checked);
+
+    void on_button_valve_v43_clicked(bool checked);
+
+    void on_button_valve_v45_clicked(bool checked);
+
+    void on_button_valve_v46_clicked(bool checked);
+
 private:
-    bool firstTimeShown;
+    bool firstTimeShown = 1;
     Ui::MainWindow *ui;
     QTimer *updateTimer;
+    QImage redImage;
+    QPixmap oriPixmap, redPixmap;
+    QImage redImageRotate;
+    QPixmap oriPixmapRotate, redPixmapRotate;
+    QImage redImageCircle;
+    QPixmap oriPixmapCircle, redPixmapCircle;
 
 };
 #endif // MAINWINDOW_H
